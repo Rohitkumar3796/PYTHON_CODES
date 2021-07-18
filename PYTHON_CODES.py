@@ -733,6 +733,320 @@ while(i<45):
 element="rohit"
 for i in reversed(element):
     print(i)
+ =============================================
+# REVERSER STRING/
+# a='rohit'
+# strg=''
+# for i in a:
+#    strg=i+strg
+# print(strg)
+# # ===========================
+# # RECURSION REVERSER STRING
+# def reverse(string):
+#    if len(string)==0:
+#       return string
+#    else:
+#       return reverse(string[1:]) + string[0]
+#
+# print(reverse('point'))
+# ==========================================
+# string=input(("Enter a string:"))
+# if(string==string[::-1]): #it return True because it is same from front and back side(front:madam=reverse:madam)
+#       print("The string is a palindrome")
+# else:
+#       print("Not a palindrome")
+# ------------------------------------
+# num=int(input("Enter a number:"))
+# temp=num
+# rev=0
+# while(num>0):
+#   a=num%10
+#   rev=rev*10+a
+#   num=num//10
+#
+# if(temp==rev):
+#     print("The number is palindrome!")
+# else:
+#     print("Not a palindrome!")
+# ------------------------------------
+# num=int(input("Enter a number:"))
+# temp=num
+# rev=0
+# while(num>0):
+#   a=num%10
+#   rev=rev*10+a
+#   num=num//10
+#
+# if(temp==rev):
+#     print("The number is palindrome!")
+# else:
+#     print("Not a palindrome!")
+# ===================================================
+# def sum1(a,b):
+#     if a==0:
+#         return b
+#     else:
+#         return sum1(a-1,a+b)
+# print(sum1(3,0)) output:6
+# ========================================
+# seed use with random.random() and from seed function we can hold or print the same value till the value are not change of seed
+# import random
+# random.seed(5)
+# print(random.random())
+# ===========================================
+# literals in python
+# String literals
+# Numeric literals
+# Boolean literals
+# Literal Collections
+# Special literals
+# =======================================
+# Q=Which code can be used as an input dialog named ''Is this a character? ''
+# Ans=Tkinter.messagebox.askyesno(''askyesno'' , ''Is this a character? '')
+# ============================================================================
+# st='oro'
+# string=''
+# ind_=st.find('o')
+# # print(ind_)
+# char=st[ind_]
+# # print(char)
+# st1=st.replace(st[ind_],'@')
+# st=st1[0:ind_+1]+st[ind_+1:]
+# print(st)
+# ============================================
+# def dictionary_(string):
+#    dict1 = {}
+#    for i in string:
+#       if i not in dict1:
+#          dict1[i]=1
+#       else:
+#          dict1[i]=dict1[i]+1
+#    print(dict1)
+#
+# string='google'
+# dictionary_(string)
+# ==================================================
+# a=34.6000
+# print('{:.0f}'.format(a)) # if you give 0 so you got inter value
+# print('{:.4%}'.format(0.33))
+# =====================================================
+# class Count:
+#     def __init__(self,count=0):
+#         self.__count=count
+
+# a=Count(2)
+# b=Count(2)
+# print(id(a)==id(b))#as we know that different variable have same value so the ids(address) will be same but objects id(address) are not same
+#
+# c= " hello "
+# d= " hello "
+# print(id(c)==id(d))#here the same happening we have different variable have same value so the id will be same
+# ==========================================================
+# print('hello world'.istitle())#it identify as per the first character should be capital
+# print('Hello World'.istitle())#it identify as per the first character should be capital
+# =========================================================
+# num=20
+# def fun(x):
+#     global num
+#     num=num+x
+# def fun1(x):
+#     num=x
+#     fun(x)
+#     print(num)
+#
+# fun1(10)
+# print(pow(2,4,5)) #output how to write this 2**4%5
+# ================================================================
+# def out(original_func):
+#     message='Hi'
+#     def inner():
+#         print(message)
+#         return original_func()
+#     return inner
+#
+# @out
+# def display():
+#     print("display")
+#
+# display()
+# ====================class Bird: #PARENT CLASS
+#
+#     def __init__(self,name,color):
+#         self.name=name
+#         self.color=color
+#     def whoisThis(self):
+#         print("Bird")
+#     def swim(self):
+#         print("swim faster")
+# class Penguin(Bird): #CHILD CLASS
+#     no='rohit'
+#     def __init__(self,name,color):
+#         super().__init__(name,color)
+#         print("bird is ready")
+#
+#     def whoisThis(self):
+#         print("Bird")
+#     def swim(self):
+#         print("swim faster")
+#
+# peggy=Penguin('rohit','black')
+# peggy.whoisThis()
+# print(peggy.name)
+# -======================
+# file=open('words.txt')
+# print(file)
+# word_dict=dict()
+# for line in file:
+#     wordList=line.split('.')
+#     for word in wordList:
+#         word_dict[word]=word
+#
+# print(word_dict)
+# ==================================
+# num=eval(input("enter the number"))
+# print("the result is: %d" %num)
+# ====================================
+import random
+# lower="abcdefghijklmnopqrstuvwxyz"
+# upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+# specials="@#$%^"
+# number="1234567890"
+# length=16
+
+# addup=upper+lower+specials+number
+# password=''.join(random.sample(addup,length))
+# print(password)
+# ============================================
+# REVERSE STRING
+# string="rohit"
+# for i in range((len(string)-1),-1,-1):
+#     print(string[i])
+# ===========================================
+# a=[1,2,3]
+# b=[4,5,6]
+# v=map(lambda x,y:x+y,a,b)
+# print(list(v))
+# ========================================================
+from string import ascii_lowercase
+from functools import reduce
+# LIST TO DICTIONARY
+a=[1, 2, 3, 4, 5, 6]
+# print(dict.fromkeys(a))
+# print(dict.fromkeys(a,'a')) #a is for value
+print({n:n for n in a})
+# p=[1,2,3]
+# q=[4,5,6]
+# print({i:j for i,j in zip(p,q)})
+# print({i:i*i for i in a})
+# MERGE TWO LIST
+# a=[1,2,3]
+# b=[1,2,3]
+# a.extend(b)
+# print(a)
+# print(a+b)
+# a.append(b)
+# print(a)
+# add to list
+# print([i+j for i,j in zip(a,b)])
+# DICTIONARY COMPREHENSION
+# f={1: 1, 2: 2, 3: 3}
+# print({i:j for i,j in f.items()})
+# print({i:j for i,j in zip(a,b) if i<5})
+# print({i:j for i,j in enumerate(ascii_lowercase) if i<5})
+
+# l1 = ["eat","sleep","repeat"]
+# print(list(enumerate(l1,1)))
+
+# d1={'a': 0, 'b': 1}
+# d2={'c': 2, 'd': 3, 'e': 4}
+# d1.update(d2)
+# print(d1)
+# print(dict(d1,**d2))
+# print({**d1, **d2})
+# print(d1.pop('a')) #here i have poped the ath element from dictionary
+# print(d1)
+# ======================================================
+# RETURN MULTIPLE VALUES FROM FUNCTION
+# def x():
+#     return 1,2,3,4,5
+# z=x()
+# print(list(z)) #default the output comes in tuple
+# def y():
+#     return 1,2,3
+# p,q,r=y()
+# print(p,q,r)
+# ======================================================
+# from functools import partial
+# # A normal function
+# def f(a, b, c, x):
+#     return 1000 * a + 100 * b + 10 * c + x
+# # A partial function that calls f with
+# # a as 3, b as 1 and c as 4.
+# g = partial(f, 3, 1, 4,4)
+# print(g())
+# =================================================================
+# count how many times 8 in the list
+count=0
+def find_occurence(lst,x):
+    global count
+    for i in lst:
+        if i==x:
+            count=count+1
+    return count
+
+x=8
+lst = [8, 6, 8, 10, 8, 20, 10, 8, 8]
+print(find_occurence(lst,x))
+# ==========================================================
+# Dict = {"1": 'Geeks', "2": 'For', "3": 'Geeks'}
+# Dict1 = {"4": 'Geeks', "5": 'For', '6': 'Geeks'}
+# print({**Dict,**Dict1})
+# dict2={**Dict,**Dict1}
+# print(dict2)
+# ==========================================================
+# MAKE SUBSTRING FROM STRING
+# s="BANANA"
+# res=[s[i:j] for i in range(len(s))for j in range(i+1,len(s)+1)]
+# print(res)
+# # _______________
+# MAKE SUBSTRING FROM STRING YOU CAN FROM LIST ALSO TO APPEND
+s="BANANA"
+for i in range(len(s)):
+    for j in range(i+1,len(s)+1):
+        print(s[i:j],end=',')
+# =========================================================
+# print MAX
+# a=[1,5,4,6,8]
+# mx=0
+# for i in range(len(a)):
+#     if a[i]>=mx:
+#         mx=a[i]
+#     else:
+#         mx=a[i]-1
+#
+# print(mx)
+# ==========================================================
+# import sys
+# def print_to_stderr(a):
+#     print(a, file=sys.stderr) #here we genereate an erorr from stderr
+#     print(a, file=sys.stdout) #here we have printing the output
+#
+# print_to_stderr("Hello World")
+# ==========================================================
+# sum of all subarrays
+# def sumofSubArray(arr,n):
+#     sum=0
+#     for i in range(0,len(arr)):
+#         sum+=(arr[i] * (i+1) * (n-i))
+#     return sum
+#
+# arr=[1,2,3]
+# n=len(arr)
+# res=sumofSubArray(arr,n)
+# print(res)
+# ==========================================================
+
+
 
 
 
